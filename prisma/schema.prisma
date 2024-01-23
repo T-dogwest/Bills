@@ -9,3 +9,9 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+model bills {
+  id     Int  @id @default(autoincrement())
+  type   String
+  amount Int
+  due    DateTime
+  }
